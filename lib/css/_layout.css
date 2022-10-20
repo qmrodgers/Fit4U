@@ -1,0 +1,161 @@
+/* Styling here should be specific to all pages and subpages */
+:root {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    --primary-color: rgb(228, 143, 64);
+    --primary-accent: rgb(218, 15, 15);
+    --primary-off-black:#333;
+    --primary-off-white: #f1f1f1;
+    --primary-white: white;
+    --primary-black: black;
+    --primary-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: var(--primary-black);
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--primary-off-white);
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+body > *, form > * {
+    margin-bottom: 1rem;
+}
+
+/* nav css */
+
+.nav-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items:center;
+    background-color: var(--primary-off-black);
+    box-shadow: var(--primary-box-shadow);
+    padding-inline: 1rem;
+    height: auto;
+    width: 100vw;
+}
+
+.nav-brand {
+    display: inline-flex;
+    position: relative;
+    font-size: 2.6rem;
+    color: var(--primary-off-white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: color 200ms ease;
+
+}
+.nav-brand:hover {
+    color: red;
+}
+
+.nav-brand::after {
+    display:inline-flex;
+    content: "";
+    width: 0;
+    transition: transform 400ms ease, width 300ms ease;
+    left: 0;
+    right: 0;
+    bottom: .3rem;
+    margin: 0 auto;
+}
+
+.nav-brand:hover::after {
+
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transform: translate3d(0, 0.4rem, 0);
+    width: 80%;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+li {
+    text-align: center;
+}
+
+ul.navbar {
+    height: 100%;
+    max-height: 64px;
+    position: relative;
+}
+nav > ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+
+li > ul {
+list-style-type: none;
+}
+
+.navbar > li {
+position: relative;
+}
+
+.navbar > li:hover {
+    background-color: var(--primary-accent);
+}
+
+.navbar > li > a {
+    padding-block: 15px;
+    padding-inline: 20px;
+}
+.nav-dropper {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-dropper + ul {
+    position: absolute;
+    margin: 0 auto;
+    display: none;
+    background-color: var(--primary-white);
+    color: var(--primary-off-black);
+    box-shadow: var(--primary-box-shadow);
+    height: auto;
+}
+.nav-dropper + ul > a {
+    height: 32px;
+    width: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: box-shadow 200ms ease, background-color 200ms ease; 
+}
+
+.nav-dropper + ul > a:hover {
+    box-shadow: inset var(--primary-box-shadow);
+background-color: var(--primary-off-white);
+}
+.nav-dropper:hover + ul, .nav-dropper + ul:hover, .nav-dropper:focus + ul, .nav-dropper + ul:focus {
+    display: block;
+border: 1px solid var(--primary-off-black);
+border-top: 2px solid var(--primary-accent);
+}
+/* end of nav css */
