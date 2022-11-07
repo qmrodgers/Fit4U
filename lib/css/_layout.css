@@ -3,7 +3,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    --primary-color: rgb(228, 143, 64);
+    --primary-color: rgb(223, 129, 21);
     --primary-accent: rgb(218, 15, 15);
     --primary-off-black:#333333;
     --primary-off-white: #f1f1f1;
@@ -35,10 +35,18 @@ body {
     background-color: var(--primary-off-white);
     font-size: 1.6rem;
     font-family: sans-serif;
+    min-height: 100vh;
 }
 
 body > *, form > * {
     margin-bottom: 2px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: var(--max-width);
+    padding-inline: .8rem;
+    flex-grow: 1;
 }
 
 /* nav css */
@@ -46,8 +54,9 @@ body > *, form > * {
     display:flex;
     width: 100%;
     justify-content: center;
-    background-color: var(--primary-off-black);
+    background-color: var(--primary-color);
     box-shadow: var(--primary-box-shadow);
+    padding-inline: .8rem;
 }
 
 .nav-container {
@@ -129,6 +138,7 @@ position: relative;
 }
 
 .navbar > li > a {
+    white-space: nowrap;
     padding-block: 15px;
     padding-inline: 20px;
 }
@@ -172,10 +182,10 @@ border-top: 2px solid var(--primary-accent);
 .breadcrumb {
     display: flex;
     justify-content: center;
-    padding-inline: 2px;
     width: 100%;
     border-bottom: 1px solid var(--primary-off-black);
     box-shadow: var(--primary-box-shadow);
+    margin-bottom: 1rem;
 }
 
 .breadcrumb ul {

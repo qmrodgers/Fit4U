@@ -3,12 +3,10 @@
 
 /* FORM CSS */
 h1 {
-    padding-inline: 1rem;
     color: var(--primary-off-black);
 }
 
 form {
-    padding-inline: 1rem;
 }
 
 fieldset {
