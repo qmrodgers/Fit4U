@@ -3,7 +3,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    --primary-color: rgb(237, 155, 3);
+    --primary-color: #ed9b03;
     --secondary-color: #3D7483;
     --primary-off-black:#1e1d1d;
     --primary-off-white: #f1f1f1;
@@ -14,6 +14,7 @@
     color: var(--primary-black);
     font-size: 62.5%;
 }
+
 
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
@@ -53,6 +54,7 @@ body > *, form > * {
 
 /* nav css */
 .nav-wrapper {
+    z-index: 5;
     display:flex;
     width: 100%;
     justify-content: center;
